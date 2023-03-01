@@ -86,15 +86,12 @@ module.exports = {
 		const subcommand = interaction.options.getSubcommand();
 		
 		if(!!interaction.options.getString('style'))
-		{
 			style = interaction.options.getString('style');
-		}
+
 		if(subcommand == 'now')
 			await interaction.reply('<t:' + Math.floor(Date.now()/1000) + style + '>');
 		else if (subcommand == 'unix')
-		{
 			await interaction.reply('<t:' + interaction.options.getInteger('unixtime') + style + '>');
-		}
 		else if(subcommand == 'deltatime')
 		{
 			const timeOffset = interaction.options.getInteger('timeoffset');
@@ -117,7 +114,6 @@ module.exports = {
 			}
 
 			await interaction.reply('<t:' + (offsetSec + Math.floor(Date.now()/1000)) + style + '>');
-
 		}
 	},
 };
