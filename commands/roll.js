@@ -8,7 +8,7 @@ module.exports = {
     .addIntegerOption(option =>
       option
         .setName('sides')
-        .setDescription('The number of sides of the die')
+        .setDescription('The number of sides the die has')
         .setRequired(false)
         .setMinValue(2)
         .setMaxValue(10000)
@@ -16,7 +16,7 @@ module.exports = {
     .addIntegerOption(option =>
       option
         .setName('count')
-        .setDescription('The number of die to roll')
+        .setDescription('The amount of dice to roll')
         .setRequired(false)
         .setMinValue(1)
         .setMaxValue(100)
